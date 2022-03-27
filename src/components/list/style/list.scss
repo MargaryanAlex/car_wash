@@ -1,0 +1,58 @@
+.listBlock {
+  border-collapse: collapse;
+
+  width: 100%;
+  border: 1px solid #dedede;
+  border-radius: 10px !important;
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #dedede;
+    height: 30px;
+    max-width: 25%;
+    span {
+      word-wrap: break-word;
+    }
+  }
+  .left-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 0;
+    border: none;
+    td {
+      padding: 0;
+      border: none;
+      height: 30px;
+      max-width: 25%;
+
+      overflow: hidden;
+    }
+  }
+  .options {
+    position: relative;
+    text-align: right;
+    width: 30px;
+    .menu {
+      display: none;
+      border: 1px solid #dedede;
+      position: absolute;
+      bottom: 0%;
+      left: 80%;
+      padding: 5px;
+      background-color: white;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .show {
+      display: block;
+    }
+  }
+  .icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .status {
+    width: 50px;
+    display: flex;
+    gap: 10px;
+  }
+}

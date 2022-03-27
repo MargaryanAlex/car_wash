@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian&display=swap");
+@import "./normalize.scss";
+* {
+  font-family: "Noto Sans Armenian", sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* margin: auto; */
+}
+@media only screen and (max-width: 1300px) {
+  * {
+    font-size: 12px !important;
+  }
+}

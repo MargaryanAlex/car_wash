@@ -1,0 +1,112 @@
+.icons .settingText {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.icons .options:hover {
+  width: 30vw;
+  cursor: pointer;
+}
+.code {
+  width: 100%;
+  display: flex;
+}
+.code div {
+  justify-self: flex-end;
+}
+.icons .options:hover .settingText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible !important;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icons .options {
+  -webkit-box-pack: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+}
+
+.icons div {
+  overflow: visible !important;
+}
+
+.form-container {
+  height: 100px;
+  background: #fbfbfb;
+  -webkit-box-shadow: 0px 0px 3px #bababa;
+  box-shadow: 0px 0px 3px #bababa;
+  border-radius: 3px;
+}
+.form-container2 {
+  height: 146px;
+  padding-top: 10px;
+  background: #fbfbfb;
+  -webkit-box-shadow: 0px 0px 3px #bababa;
+  box-shadow: 0px 0px 3px #bababa;
+  border-radius: 3px;
+}
+
+.form {
+  padding: 25px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.left-side {
+  width: 50%;
+}
+.left-side span {
+  overflow: hidden;
+}
+
+.left-side .code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  padding: 0 5px 0;
+}
+
+.right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+/*# sourceMappingURL=add-user.css.map */

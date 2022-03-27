@@ -1,0 +1,41 @@
+.logIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  flex-basis: 50%;
+  height: 60%;
+  align-items: space-between;
+  p {
+    font-size: 1.8vw;
+    flex-basis: 40%;
+    white-space: nowrap;
+  }
+  div {
+    input:focus {
+      outline: none;
+    }
+    font-size: 1.1vw;
+    display: flex;
+    max-height: 70%;
+    gap: 10%;
+    flex-direction: column;
+    width: 90%;
+    justify-items: left;
+    align-content: space-between;
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #343434;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      color: #fafafa;
+      background-color: #343434;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.btn-container{
+  height: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+width: 145px;
+height: 35px;
+color: #fafafa;
+background: #343434;
+box-sizing: border-box;
+border-radius: 3px;
+}

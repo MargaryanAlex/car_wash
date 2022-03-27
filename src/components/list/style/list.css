@@ -1,0 +1,77 @@
+.listBlock {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dedede;
+  border-radius: 10px !important;
+}
+
+.listBlock td {
+  padding: 10px;
+  border-bottom: 1px solid #dedede;
+  height: 30px;
+  max-width: 25%;
+}
+
+.listBlock td span {
+  word-wrap: break-word;
+}
+
+.listBlock .left-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  padding: 0;
+  border: none;
+}
+
+.listBlock .left-icons td {
+  padding: 0;
+  border: none;
+  height: 30px;
+  max-width: 25%;
+  overflow: hidden;
+}
+
+.listBlock .options {
+  position: relative;
+  text-align: right;
+  width: 30px;
+}
+
+.listBlock .options .menu {
+  display: none;
+  border: 1px solid #dedede;
+  position: absolute;
+  bottom: 0%;
+  left: 80%;
+  padding: 5px;
+  background-color: white;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.listBlock .options .show {
+  display: block;
+}
+
+.listBlock .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.listBlock .status {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+/*# sourceMappingURL=list.css.map */

@@ -1,0 +1,35 @@
+.footer {
+  line-height: 1.1;
+  .line {
+    margin: 1vh auto;
+    border-bottom: 1px solid #343434;
+  }
+  img {
+    height: 1.5vw;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.87vw;
+  }
+
+  .bottom {
+    color: #999999;
+  }
+  .left {
+    width: 60%;
+  }
+  .copyLeft {
+    width: 60%;
+  }
+  .right {
+    img {
+      height: 1vw;
+    }
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10%;
+  }
+}

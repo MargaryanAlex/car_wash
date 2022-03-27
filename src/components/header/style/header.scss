@@ -1,0 +1,33 @@
+.header {
+  width: 70vw;
+  margin: 1vh auto 2vh;
+  font-size: 1.1vw;
+  display: flex;
+  color: #343434;
+  a {
+    color: #343434;
+  }
+  justify-content: space-between;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    min-width: 120px;
+    width: 10%;
+    img {
+      width: 100%;
+    }
+  }
+  .center {
+    width: 45%;
+    white-space: nowrap;
+  }
+  .rightBar {
+    width: 20%;
+    div {
+      gap: 5px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.form-container {
+  margin-top: 28px;
+}
+.form2 {
+  width: calc(100% - 16px);
+  box-sizing: border-box;
+  height: 100%;
+}
+.notification {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 11px;
+  padding-left: 16px;
+  background: #c1daff;
+  margin-bottom: 8px;
+}
+.notification div {
+  align-self: flex-start;
+}
+.date {
+  display: flex;
+  align-self: flex-end !important;
+  align-items: flex-end;
+  padding-right: 16px;
+  padding-bottom: 11px;
+}
