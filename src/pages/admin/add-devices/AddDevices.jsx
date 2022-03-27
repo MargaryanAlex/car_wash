@@ -18,7 +18,7 @@ const AddDevices = (props) => {
       <div className="form-container">
         <div className="form">
           <div>
-            <p style={{ marginBottom: "5px" }}>
+            <p style={{ marginBottom: "6px" }}>
               Ավելացնել սարքաորման տվյալները
             </p>
             <Input
