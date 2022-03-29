@@ -36,7 +36,9 @@ import AddDevices from "src/pages/admin/add-devices/AddDevices";
 const MainPage = (props) => {
   const [isHomePressed, setIsHomePreessed] = useState(true);
   useEffect(() => {
-    props.chekAuth();
+    if (localStorage.getItem("success")) {
+      props.chekAuth();
+    }
   }, [props.authorization.refresh_token]);
   const chekHomePressed = (v) => {
     setIsHomePreessed(v);

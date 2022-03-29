@@ -1,6 +1,6 @@
 .home-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 70vw;
   height: 100%;
 }

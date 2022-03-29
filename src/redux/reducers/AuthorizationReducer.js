@@ -95,3 +95,19 @@ export const chekAuthTC = () => {
       });
   };
 };
+export const signUpTC = (data) => {
+  return (dispatch) => {
+    axios
+      .post(API_URL + "/user", {
+        name: data.login,
+        first_name: data.name,
+        last_name: data.surname,
+        password: data.password,
+        ticket_code: data.code,
+      })
+      .then((res) => {
+        dispatch(getAcountTC(data));
+      })
+      .catch((err) => console.log(err));
+  };
+};

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = "http://144.91.119.81:5000/api";
+export const API_URL = "http://185.183.182.157:5003/api";
 
 function set_tokens(payload) {
   localStorage.setItem("access_token", payload.access_token);

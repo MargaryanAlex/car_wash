@@ -1,37 +1,76 @@
-import React from "react";
-import "./notifications.css";
+import React, { useEffect } from "react";
+import style from "./notifications.module.css";
 
 import exclamation from "src/resource/icons/exclamation.svg";
 import ellipsis from "src/resource/icons/ellipsis.svg";
+import { getNotificationTC } from "src/redux/reducers/NotificationReducer";
+import { connect } from "react-redux";
 
-const Notifications = () => {
+const Notifications = (props) => {
   localStorage.removeItem("id");
-
+  useEffect(() => {
+    props.getNotification();
+    console.log(style);
+  }, []);
   return (
-    <div className="home-page">
+    <div className={style.home_page}>
       <h1> Ծանուցումներ</h1>
       <hr />
-      <div className="form-container">
-        <div className="form2">
-          <div className="notification">
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <img src={exclamation} alt="exclamation" width="25" />
-              <p style={{ margin: "0", whiteSpace: "nowrap" }}>
-                Սարքի սխալ, կոդը
-              </p>
-              <p className="code" style={{ margin: "0" }}>
-                code
-              </p>
+      <div className={style.form_container}>
+        <div className={style.form2}>
+          {props.notification.data.length > 0 ? (
+            props.notification.data.map((item, index) => {
+              return (
+                <div className={style.notification} key={index}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      width: "300px",
+                    }}
+                  >
+                    <img src={exclamation} alt="exclamation" width="25" />
+                    <p style={{ margin: "0", whiteSpace: "nowrap" }}>
+                      {item.device_code} Սարքի սխալ, կոդը
+                    </p>
+                    <p className={style.code} style={{ margin: "0" }}>
+                      {item.msg}
+                    </p>
+                  </div>
+                  <div className={style.date}>
+                    {item.creation_date}
+                    <img src={ellipsis} alt="exclamation" width="25" />
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <div
+              className={style.notification}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p style={{ fontSize: "20px" }}> THER ARE NO RESULT </p>
             </div>
-            <div className="date">
-              date
-              <img src={ellipsis} alt="exclamation" width="25" />
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    notification: state.notifications,
+  };
+};
 
-export default Notifications;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getNotification: () => dispatch(getNotificationTC()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Notifications);

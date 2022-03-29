@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { signUpTC } from "src/redux/reducers/AuthorizationReducer";
 import "./style/login.css";
 
-const Registration = () => {
-  const [value, setValue] = useState({});
+const Registration = (props) => {
+  const [value, setValue] = useState({
+    login: "",
+    name: "",
+    surname: "",
+    password: "",
+    password2: "",
+    code: "",
+  });
   const change = (e) => {
-    console.log(e);
     setValue({ ...value, [e.target.name]: e.target.value });
   };
   return (
@@ -53,10 +61,28 @@ const Registration = () => {
           onChange={change}
           placeholder="Լրացնել կոդը*"
         />
-        <button>Մուտք գործել</button>
+        <button
+          onClick={() => {
+            if (value.password == value.password2) {
+              console.log(value);
+              props.signUp(value);
+            }
+          }}
+        >
+          Մուտք գործել
+        </button>
       </div>
     </div>
   );
 };
-
-export default Registration;
+const mapStateToProps = (state) => {
+  return {
+    registration: state.registration,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signUp: (data) => dispatch(signUpTC(data)),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Registration);

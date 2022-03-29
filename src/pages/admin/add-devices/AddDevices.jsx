@@ -33,7 +33,12 @@ const AddDevices = (props) => {
           </div>
           <div className="btns">
             <Button style={{ marginRight: "27px" }}>Ջնջել ամբողջը</Button>
-            <Button onClick={() => creatDevice(value.code)}>
+            <Button
+              onClick={() => {
+                creatDevice(value.code);
+                setValue("");
+              }}
+            >
               Ուղարկել կոդը
             </Button>
           </div>

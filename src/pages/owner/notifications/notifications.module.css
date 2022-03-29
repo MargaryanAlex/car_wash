@@ -1,4 +1,14 @@
-.form-container {
+.home_page {
+  width: 75%;
+  height: 803px;
+  background-color: #fcf9f9;
+  padding: 17px 0 17px 24px;
+  font-family: "Noto Sans Armenian";
+  color: #343434;
+  
+}
+.form_container {
+  height: 100px;
   margin-top: 28px;
 }
 .form2 {
