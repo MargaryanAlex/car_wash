@@ -22,6 +22,7 @@
     width: 90%;
     justify-items: left;
     align-content: space-between;
+
     input {
       width: 100%;
       border: none;
@@ -37,5 +38,10 @@
       border: none;
       border-radius: 3px;
     }
+  }
+}
+.red {
+  input {
+    border-bottom: 1px solid #f12828 !important;
   }
 }

@@ -49,8 +49,14 @@ export const getNotificationTC = () => {
   return (dispatch) => {
     request("/device_payment", "get").then((res) => {
       if (!res.obj.msg) {
-        res?.obj?.map((item, index) => {
-          request(`/device_payment/${item}`, "get").then((response) => {});
+        res.obj.map((item, index) => {
+          request(`/device_payment/${item}`, "get")
+            .then((response) => {
+              console.log(response);
+              dispatch(clearDataAC());
+              dispatch(setDataAC(response.obj));
+            })
+            .catch((e) => console.log(e));
         });
       }
     });
@@ -59,6 +65,7 @@ export const getNotificationTC = () => {
         res.obj.map((item, index) => {
           request(`/device_error/${item}`, "get")
             .then((response) => {
+              dispatch(clearDataAC());
               dispatch(setDataAC(response.obj));
             })
             .catch((e) => console.log(e));

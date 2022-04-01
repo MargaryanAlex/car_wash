@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { signUpTC } from "src/redux/reducers/AuthorizationReducer";
-import "./style/login.css";
+import style from "./style/login.module.scss";
 
 const Registration = (props) => {
   const [value, setValue] = useState({
@@ -16,7 +16,10 @@ const Registration = (props) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
   return (
-    <div className="logIn" style={{ height: "35%", alignSelf: "stretch" }}>
+    <div
+      className={style.logIn}
+      style={{ height: "35%", alignSelf: "stretch" }}
+    >
       <p>Ստեղծել նոր հաշիվ</p>
       <div>
         <input

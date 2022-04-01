@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style/login.css";
+import style from "./style/login.module.scss";
 import { connect } from "react-redux";
 import { getAcountTC } from "src/redux/reducers/AuthorizationReducer";
 import { NavLink } from "react-router-dom";
@@ -16,9 +16,9 @@ const LogIn = (props) => {
     props.getAC(value);
   };
   return (
-    <div className="logIn">
+    <div className={style.logIn}>
       <p>Մուտքագրեք տվյալները</p>
-      <div>
+      <div className={props.authorization.error ? style.red : ""}>
         <input
           type={"login"}
           name="login"

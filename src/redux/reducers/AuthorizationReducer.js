@@ -10,11 +10,13 @@ const authorizationState = {
   },
   loader: false,
   refresh_token: "",
+  error: false,
 };
 const GET_PROFILE = "GET_PROFIL";
 const LOG_IN = "LOG_IN";
 const LOADER = "LOADER";
 const LOG_OUT = "LOG_OUT";
+const ERROR = "ERROR";
 const authorizationReducer = (state = authorizationState, action) => {
   switch (action.type) {
     case LOG_IN:
@@ -41,7 +43,7 @@ const authorizationReducer = (state = authorizationState, action) => {
       };
     case LOG_OUT:
       localStorage.clear();
-
+      document.location.replace("/login");
       return {
         ...state,
         obj: {
@@ -53,7 +55,11 @@ const authorizationReducer = (state = authorizationState, action) => {
         loader: false,
         refresh_token: "",
       };
-
+    case ERROR:
+      return {
+        ...state,
+        error: true,
+      };
     default:
       return state;
   }
@@ -64,6 +70,7 @@ export const getProfileAC = (data) => ({ type: GET_PROFILE, data });
 export const logInAC = (data) => ({ type: LOG_IN, data });
 export const loaderAC = (data) => ({ type: LOADER, data });
 export const logOutAC = () => ({ type: LOG_OUT });
+export const errorAC = () => ({ type: ERROR });
 
 export const getAcountTC = (value) => {
   return (dispatch) => {
@@ -76,7 +83,8 @@ export const getAcountTC = (value) => {
         dispatch(logInAC(response.data));
       })
       .catch(function (error) {
-        console.log("error");
+        dispatch(logOutAC());
+        dispatch(errorAC());
       });
   };
 };
@@ -90,8 +98,9 @@ export const chekAuthTC = () => {
         dispatch(getProfileAC(response));
         dispatch(loaderAC(false));
       })
-      .catch((e) => {
-        console.log(e);
+      .catch(async (e) => {
+        dispatch(logOutAC());
+        dispatch(errorAC());
       });
   };
 };

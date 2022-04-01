@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { chekAuthTC } from "src/redux/reducers/AuthorizationReducer";
 import { Oval } from "react-loader-spinner";
 
-import "./style/mainPage.css";
+import style from "./style/mainPage.module.scss";
 
 //Components
 import Header from "src/components/header/Header";
@@ -63,7 +63,7 @@ const MainPage = (props) => {
         return (
           <BrowserRouter>
             <Header text="Գլխավոր էջ" link="/" />
-            <div className="home-container">
+            <div className={style.home_container}>
               <SideBar
                 data={[
                   { url: "/addUser", img: admin, text: "Ստեղծել օգտատեր" },
@@ -93,7 +93,7 @@ const MainPage = (props) => {
         return (
           <BrowserRouter>
             <Header text="Գլխավոր էջ" link="/" />
-            <div className="home-container container">
+            <div className={style.home_container + " " + style.container}>
               <SideBar
                 data={[
                   {
@@ -122,8 +122,8 @@ const MainPage = (props) => {
                 <Route path="/" element={<Registration />} />
               </Routes>
 
-              <div className="img">
-                <img src={car} alt="car" className="img-car" />
+              <div className={style.img}>
+                <img src={car} alt="car" className={style.img_car} />
               </div>
             </section>
             <div>

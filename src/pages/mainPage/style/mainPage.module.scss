@@ -5,14 +5,23 @@
   display: grid;
   justify-content: space-between;
 }
+.home_container {
+  display: flex;
+  align-items: flex-start;
+  width: 70vw;
+  height: 100%;
+}
 section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
-  img {
-    width: 100%;
-    height: 100%;
+  height: calc(100vh - 190px);
+  .img {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }

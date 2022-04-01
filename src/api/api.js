@@ -23,7 +23,7 @@ export function refresh(path, method, body) {
       if (err.response.status === 422 || err.response.status === 401) {
         if (localStorage.getItem("refresh_token")) {
           localStorage.clear();
-          document.location.replace("/");
+          document.location.replace("/login");
         }
         return err;
       }

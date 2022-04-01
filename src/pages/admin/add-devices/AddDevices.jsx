@@ -3,8 +3,7 @@ import { creatDevice } from "src/api/api";
 import Input from "src/components/input/Input.component";
 import Button from "src/components/button/Button.component";
 
-// import "./style/home-page.css";
-import "./add-devices.css";
+import style from "./add-devices.module.css";
 
 const AddDevices = (props) => {
   const [value, setValue] = useState({
@@ -12,11 +11,11 @@ const AddDevices = (props) => {
   });
 
   return (
-    <div className="home-page">
+    <div className={style.home_page}>
       <h1> Ավելացնել սարք</h1>
       <hr />
-      <div className="form-container">
-        <div className="form">
+      <div className={style.form_container}>
+        <div className={style.form}>
           <div>
             <p style={{ marginBottom: "5px" }}>
               Ավելացնել սարքաորման տվյալները
@@ -31,7 +30,7 @@ const AddDevices = (props) => {
               }}
             />
           </div>
-          <div className="btns">
+          <div className={style.btns}>
             <Button style={{ marginRight: "27px" }}>Ջնջել ամբողջը</Button>
             <Button
               onClick={() => {

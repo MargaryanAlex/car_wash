@@ -1,31 +1,31 @@
 import React from "react";
 import logo from "src/resource/img/logo.svg";
 import armenian from "src/resource/icons/flagArmenia.svg";
-import "../header/style/header.css";
+import style from "./style/header.module.scss";
 import arrow from "src/resource/icons/arrowDown.svg";
 import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
   const { link, text, img } = props;
   return (
-    <div className="header">
-      <div className="logo">
+    <div className={style.header}>
+      <div className={style.logo}>
         <NavLink to="/">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt={style.logo} />
         </NavLink>
       </div>
-      <div className="center">
+      <div className={style.center}>
         <p>Մեր մասին</p>
         <p>Կոնտակտներ</p>
         <p>Ծառայություններ</p>
       </div>
-      <div className="rightBar">
+      <div className={style.rightBar}>
         <div>
           {img ? <img src={img} alt="home" /> : ""}
 
           <NavLink to={link}>{text} </NavLink>
         </div>
-        <div className="language">
+        <div className={style.language}>
           <img
             src={armenian}
             alt="Armenian flag"

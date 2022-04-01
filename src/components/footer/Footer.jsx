@@ -1,36 +1,36 @@
 import React from "react";
 import logo from "src/resource/img/logoBW.svg";
 import phone from "src/resource/icons/phone.svg";
-import "../footer/style/footer.css";
+import style from "./style/footer.module.scss";
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="row top">
-        <div className="left">
-          <img src={logo} alt="logo" className="logo" />
+    <div className={style.footer}>
+      <div className={style.row + " " + style.top}>
+        <div className={style.left}>
+          <img src={logo} alt="logo" className={style.logo} />
         </div>
-        <div className="right">
-          <div className="number">
+        <div className={style.right}>
+          <div className={style.number}>
             <p>Աջակցության գիծ</p>
-            <span >
+            <span>
               <img src={phone} alt="phoneIcon" /> 044 55 66 77
             </span>
           </div>
-          <div className="about">
+          <div className={style.about}>
             <p>Ծառայություններ</p>
             <p>Մեր մասին</p>
           </div>
         </div>
       </div>
-      <div className="line" />
-      <div className="row bottom">
-        <div className=" copyLeft">
+      <div className={style.line} />
+      <div className={style.row + " " + style.bottom}>
+        <div className={style.copyLeft}>
           <div>
             By signing up you are agreeing to get mails and updates. You may
             unsubscribe at any time.
           </div>
         </div>
-        <div className=" copyRight">
+        <div className={style.copyRight}>
           <div>
             © 2021 Company LLP. All Rights Reserved. Privacy Policy Legal Notice
           </div>
