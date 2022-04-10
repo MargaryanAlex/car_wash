@@ -50,7 +50,7 @@ export const getNotificationTC = () => {
     request("/device_payment", "get").then((res) => {
       if (!res.obj.msg) {
         res.obj.map((item, index) => {
-          request(`/device_payment/${item}`, "get")
+         return  request(`/device_payment/${item}`, "get")
             .then((response) => {
               console.log(response);
               dispatch(clearDataAC());
@@ -62,7 +62,7 @@ export const getNotificationTC = () => {
     });
     request("/device_error", "get").then((res) => {
       if (!res.obj.msg) {
-        res.obj.map((item, index) => {
+       return res.obj.map((item, index) => {
           request(`/device_error/${item}`, "get")
             .then((response) => {
               dispatch(clearDataAC());

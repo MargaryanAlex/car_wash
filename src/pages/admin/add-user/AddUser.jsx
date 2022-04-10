@@ -6,7 +6,7 @@ import Input from "src/components/input/Input.component";
 import Button from "src/components/button/Button.component";
 
 // import "./style/home-page.css";
-import "./add-user.css";
+import style from "./add-user.module.css";
 import refresh from "src/resource/icons/refresh.svg";
 import { getOwnersInfoTC, getTicketTC } from "src/redux/reducers/UsersReducer";
 const AddUser = (props) => {
@@ -17,14 +17,14 @@ const AddUser = (props) => {
     props.getOwnersInfo();
   }, [props.users.refresh]);
   return (
-    <div className="home-page">
+    <div className={style.home_page}>
       <h1>Ստեղծել կոդ</h1>
       <p>ստեղծել 20 նիշ ունեցող կոդ</p>
       <hr />
-      <div className="form-container2">
-        <div className="form">
-          <div className="left-side">
-            <div className="code">
+      <div className={style.form_container2}>
+        <div className={style.form}>
+          <div className={style.left_side}>
+            <div className={style.code}>
               <span>{props.users.userTicket}</span>
 
               <div onClick={props.getTicket} style={{ margin: "6.5px 4px" }}>
@@ -32,7 +32,7 @@ const AddUser = (props) => {
               </div>
             </div>
           </div>
-          <div className="right-side">
+          <div className={style.right_side}>
             <Input
               style={{ beckground: "1px solid #bababa" }}
               type="email"
@@ -42,7 +42,7 @@ const AddUser = (props) => {
                 setValue({ [e.target.name]: e.target.value });
               }}
             />
-            <div className="btns">
+            <div className={style.btns}>
               <Button style={{ marginRight: "27px" }}>Ջնջել ամբողջը</Button>
               <Button
                 onClick={() => sendEmail(props.users.ticketID, value.email)}
@@ -53,7 +53,7 @@ const AddUser = (props) => {
           </div>
         </div>
       </div>
-      <div className="block">
+      <div className={style.block}>
         <h1 style={{ paddingTop: "25px", marginLeft: "18px" }}>
           Առանց կարգավիճակ
         </h1>

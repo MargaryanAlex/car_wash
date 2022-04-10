@@ -1,0 +1,44 @@
+.home-container {
+  /* display: flex;
+  align-items: flex-start; */
+  width: 70vw;
+  height: calc(100vh - 94px);
+}
+
+.head {
+  padding: 0 17px 37px 0;
+
+  box-sizing: border-box;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: space-between;
+}
+
+.foot {
+  border-top: 1px solid #bababa;
+  padding-top: 10px;
+}
+
+.home_page {
+  width: 75%;
+  height: calc(100vh - 94px);
+  background-color: #fcf9f9;
+  padding: 17px 0 17px 24px;
+  font-family: "Noto Sans Armenian";
+  color: #343434;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.home_page h1,
+p {
+  padding: 0px 10px;
+  line-height: 25px;
+}
+
+@media only screen and (max-device-width: 1320px) {
+  * {
+    font-size: 12px;
+  }
+}

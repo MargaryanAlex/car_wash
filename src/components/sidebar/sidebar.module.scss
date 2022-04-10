@@ -1,15 +1,15 @@
-.home-container {
-  display: flex;
-  align-items: flex-start;
+.home_container {
+  /* display: flex;
+    align-items: flex-start; */
   width: 70vw;
-  height: 100%;
+  height: calc(100vh - 94px);
 }
 
 .list {
+  height: calc(100vh - 94px);
+  
   min-width: 170px;
   width: 25%;
-  min-height: 803px;
-  height: 100%;
   padding: 17px 0 17px 17px;
   background-color: #343434;
   display: flex;
@@ -19,7 +19,7 @@
 .list div {
   width: 100%;
 }
-.ul-list {
+.ul_list {
   width: 100%;
   list-style: none;
   padding: 0;
@@ -28,7 +28,7 @@
   font-weight: 400;
   color: #fafafa;
 }
-.ul-list li {
+.ul_list li {
   width: 100%;
   line-height: 40px;
 }
@@ -51,7 +51,7 @@ li .sideTab {
   padding-top: 10px;
 }
 
-.home-page {
+.home_page {
   width: 75%;
   height: 803px;
   background-color: #fcf9f9;
@@ -63,7 +63,7 @@ a {
   text-decoration: none;
   color: white;
 }
-.home-page h1,
+.home_page h1,
 p {
   padding: 0px 10px;
   line-height: 25px;

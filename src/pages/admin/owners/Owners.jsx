@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import "./owners.css";
+import style from "./owners.module.css";
 
 import List from "src/components/list/List";
 import {
@@ -15,7 +15,7 @@ const Owners = (props) => {
     props.getOwnersInfo();
   }, [props.users.refresh]);
   return (
-    <div className="Owners home-page">
+    <div className={`${style.owners} ${style.home_page}`}>
       <h1>Սեփականատերեր</h1>
 
       <p>Աշխատակիցների ցանկ</p>

@@ -1,3 +1,12 @@
+.home_page {
+  width: 75%;
+  height: calc(100vh - 94px);
+  background-color: #fcf9f9;
+  padding: 17px 0 17px 24px;
+  font-family: "Noto Sans Armenian";
+  color: #343434;
+}
+
 .icons .settingText {
   display: none;
   position: relative;
@@ -36,14 +45,14 @@
   overflow: visible !important;
 }
 
-.form-container {
+.form_container {
   height: 100px;
   background: #fbfbfb;
   -webkit-box-shadow: 0px 0px 3px #bababa;
   box-shadow: 0px 0px 3px #bababa;
   border-radius: 3px;
 }
-.form-container2 {
+.form_container2 {
   height: 146px;
   padding-top: 10px;
   background: #fbfbfb;
@@ -62,14 +71,14 @@
   gap: 20px;
 }
 
-.left-side {
+.left_side {
   width: 50%;
 }
-.left-side span {
+.left_side span {
   overflow: hidden;
 }
 
-.left-side .code {
+.left_side .code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +93,7 @@
   padding: 0 5px 0;
 }
 
-.right-side {
+.right_side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

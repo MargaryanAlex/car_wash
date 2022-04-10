@@ -4,13 +4,16 @@
   height: 100%;
   display: grid;
   justify-content: space-between;
+  position: relative;
 }
 .home_container {
   display: flex;
   align-items: flex-start;
   width: 70vw;
-  height: 100%;
+  position: relative;
+  height: calc(100vh - 94px);
 }
+
 section {
   display: flex;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import "./devices.css";
+import style from "./devices.module.css";
 
 import List from "src/components/list/List";
 import { getDevicesMoreTC } from "src/redux/reducers/DevicesReducer";
@@ -11,7 +11,7 @@ const Owners = (props) => {
     props.getDevices();
   }, [props.devices.refresh]);
   return (
-    <div className="Owners home-page">
+    <div className={style.home_page}>
       <h1>Սարքեր</h1>
 
       <p>ներկայիս քանակն է </p>

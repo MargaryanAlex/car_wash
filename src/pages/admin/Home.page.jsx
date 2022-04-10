@@ -2,14 +2,14 @@ import React from "react";
 
 import Table from "src/components/table/Table";
 
-import "./home-page.css";
+import style from "./home-page.module.css";
 import { connect } from "react-redux";
 
 const HomePage = (props) => {
   localStorage.removeItem("id");
 
   return (
-    <div className="home-page">
+    <div className={style.home_page}>
       <h1>Գլխավոր</h1>
       <p>Անձնական տվյալներ</p>
       <Table

@@ -81,10 +81,11 @@ export const getAcountTC = (value) => {
       })
       .then(function (response) {
         dispatch(logInAC(response.data));
+        document.location.replace("/");
       })
       .catch(function (error) {
-        dispatch(logOutAC());
         dispatch(errorAC());
+        console.log(error.response);
       });
   };
 };

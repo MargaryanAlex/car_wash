@@ -1,13 +1,14 @@
-.home-page {
+.home_page {
+  width: 100%;
+  height: calc(100vh - 94px);
   display: contents;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
-
 }
 
-.left-side {
+.left_side {
   width: 47%;
   display: flex;
   flex-direction: column;
@@ -19,7 +20,7 @@
   color: #343434;
 }
 
-.left-side h1 {
+.left_side h1 {
   font-family: "Noto Sans Armenian";
   font-style: normal;
   font-weight: 400;
@@ -42,12 +43,10 @@
   margin-top: 25px;
 }
 
-.right-side {
-  width: 53%;
+.right_side {
+  width: 50%;
 }
 
-.right-side img{
+.right_side img {
   width: 100%;
 }
-
-

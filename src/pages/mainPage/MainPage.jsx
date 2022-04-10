@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { connect } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
 import { chekAuthTC } from "src/redux/reducers/AuthorizationReducer";
 import { Oval } from "react-loader-spinner";
 
@@ -13,9 +12,9 @@ import Footer from "src/components/footer/Footer";
 import Login from "src/components/login/Login";
 import Registration from "src/components/login/Registration";
 import SideBar from "src/components/sidebar/SideBar";
+import Error from "src/components/error/Error";
 
 //Resource
-import car from "src/resource/img/car.png";
 import admin from "src/resource/icons/admin.svg";
 import owner from "src/resource/icons/owner.svg";
 import notifications from "src/resource/icons/notifications.svg";
@@ -34,15 +33,13 @@ import OwnerNotifications from "src/pages/owner/notifications/Notifications";
 import AddDevices from "src/pages/admin/add-devices/AddDevices";
 
 const MainPage = (props) => {
-  const [isHomePressed, setIsHomePreessed] = useState(true);
   useEffect(() => {
+    console.log(document.location);
     if (localStorage.getItem("success")) {
       props.chekAuth();
     }
   }, [props.authorization.refresh_token]);
-  const chekHomePressed = (v) => {
-    setIsHomePreessed(v);
-  };
+
   if (props.authorization.loader) {
     return (
       <div
@@ -76,6 +73,7 @@ const MainPage = (props) => {
                   { url: "/devices", img: devices, text: "Սարքեր" },
                 ]}
               />
+
               <Routes>
                 <Route path="/addUser" element={<AddUser />} />
                 <Route path="/add_devices" element={<AddDevices />} />
@@ -83,6 +81,7 @@ const MainPage = (props) => {
                 <Route path="/devices" element={<Devices />} />
                 <Route path="/notifications" element={<Notifications />} />
                 <Route path="/" element={<AdminHomePage />} />
+                <Route path="*" element={<Error />} />
               </Routes>
             </div>
           </BrowserRouter>
@@ -93,7 +92,7 @@ const MainPage = (props) => {
         return (
           <BrowserRouter>
             <Header text="Գլխավոր էջ" link="/" />
-            <div className={style.home_container + " " + style.container}>
+            <div className={style.home_container}>
               <SideBar
                 data={[
                   {
@@ -108,6 +107,7 @@ const MainPage = (props) => {
                 <Route path="/devices" element={<DevicesMore />} />
                 <Route path="/notifications" element={<OwnerNotifications />} />
                 <Route path="/" element={<OwnerHomePage />} />
+                <Route path="*" element={<Error />} />
               </Routes>
             </div>
           </BrowserRouter>
@@ -116,16 +116,13 @@ const MainPage = (props) => {
         return (
           <BrowserRouter>
             <Header text="Մուտք" link="/login" />
-            <section>
+            <div>
               <Routes>
-                <Route path="/logIn" element={<Login />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/" element={<Registration />} />
+                <Route path="*" element={<Error isLogin={true} />} />
               </Routes>
-
-              <div className={style.img}>
-                <img src={car} alt="car" className={style.img_car} />
-              </div>
-            </section>
+            </div>
             <div>
               <Footer />
             </div>

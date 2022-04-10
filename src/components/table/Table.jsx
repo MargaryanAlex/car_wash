@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./table.css";
+import style from "./table.module.css";
 
 const Table = (props) => {
   const [value, setValue] = useState({
@@ -10,7 +10,7 @@ const Table = (props) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
   return (
-    <table className="table">
+    <table className={style.table}>
       <tbody >
         {props.data.map((item, index) => {
           return (
